@@ -1,0 +1,52 @@
+
+
+main {
+    .contact {
+        @include section;
+        margin-top: 10vh;
+        color: $secondary-color;
+        padding-top: 40px;
+        
+
+        h2 {
+            @include subheading;
+        }
+
+        &__list {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+
+
+
+            &-item {
+                // border: 2px solid green;
+                margin: 20px;
+                text-align: center;
+                i {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-weight: lighter;
+                }
+
+                a {
+                    @include transition-ease;
+
+
+                    &:hover {
+                        color: $primary-color;
+                        @include transition-ease;
+                        transform: scale(2);
+                    }
+
+                }
+                
+                
+            }
+        }
+
+    }
+}

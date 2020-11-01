@@ -1,0 +1,124 @@
+main {
+
+    .services {
+        // border: 2px solid green;
+        @include section;
+        font-weight: lighter;
+        margin-top: 10vh;
+        padding-top: 40px;
+
+        h2 {
+            @include subheading;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: lighter;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            // border: 2px solid blue;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            font-size: 0.5rem;
+
+            &-item {
+                max-width: 600px;
+                border: 1px solid lighten($secondary-color, 60);
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                margin: 10px;
+                grid-template-columns: 1.5fr 2fr;
+                // padding: 5px;
+                box-shadow: 0.5px 0.5px 15px 2px lighten($secondary-color, 60);
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                height: 200px;
+
+                &-text {
+                    // border: 2px solid green;
+                    
+                    h4 {
+                        font-size: 1.5rem;
+                        margin-bottom: 5px;
+                        font-weight: lighter;
+
+                    }
+                    p {
+                        // margin-top: 5px;
+                        line-height: 1.1rem;
+                    }
+
+                }
+
+                &-img {
+                    height: 200px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border: 10px solid lighten($secondary-color, 40);
+                        border-top-left-radius: 40px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .benefits {
+        // border: 2px solid red;
+        @include section;
+        min-height: 40vh;
+        padding-bottom: 40px;
+
+        h2 {
+            @include subheading;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        &__list {
+            margin-top: 30px;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+
+            &-item {
+                // border: 2px solid red;
+                display: grid;
+                grid-template-rows: 1fr 0.1fr;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                max-width: 400px;
+                width: 300px;
+                // height: 300px;
+                margin: 10px;
+                font-size: 0.8rem;
+                font-weight: lighter;
+
+                img {
+                    border: 10px solid lighten($secondary-color, 50);
+                    height: 200px;
+                    // border-top-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    border-right-style: ridge;
+                    border-right-width: 30px;
+                }
+            }
+        }
+    }
+}
